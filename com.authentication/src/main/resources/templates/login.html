@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+        :root {
+            --background: #1a1a2e;
+            --color: #ffffff;
+            --primary-color: #0f3460;
+            --input-background: #9191911f;
+            --button-background: #0f3460;
+            --button-hover: #0056b3;
+        }
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: "Poppins", sans-serif;
+            background: var(--background);
+            color: var(--color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        /* Container Styling */
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 0 36px 1px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(20px);
+            width: 22.2rem;
+            position: relative;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--color);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        input[type="text"], input[type="password"] {
+            display: block;
+            width: 100%;
+            padding: 14.5px;
+            margin: 1rem 0;
+            background-color: var(--input-background);
+            border: none;
+            border-radius: 5px;
+            color: var(--color);
+            outline: none;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 0.8px;
+            backdrop-filter: blur(15px);
+        }
+
+        input[type="submit"] {
+            background-color: var(--button-background);
+            color: var(--color);
+            border: none;
+            border-radius: 5px;
+            padding: 15px;
+            font-size: 18px;
+            letter-spacing: 1.5px;
+            font-weight: bold;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: var(--button-hover);
+            transform: scale(1.02);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        .circle {
+            width: 8rem;
+            height: 8rem;
+            background: var(--primary-color);
+            border-radius: 50%;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .circle-one {
+            top: -10%;
+            left: -10%;
+            transform: translate(-45%, -45%);
+        }
+
+        .circle-two {
+            bottom: -10%;
+            right: -10%;
+            transform: translate(45%, 45%);
+        }
+    </style>
+</head>
+<body>
+    <div class="circle circle-one"></div>
+    <div class="circle circle-two"></div>
+    <div class="container">
+        <h2>Welcome to Login Page!</h2>
+        <form action="/login" method="post">
+            <label for="username">USERNAME</label>
+            <input type="text" id="username" name="username">
+            <label for="password">PASSWORD</label>
+            <input type="password" id="password" name="password">
+            <input type="submit" value="LOGIN">
+        </form>
+        <a href="#">Forgot password?</a>
+    </div>
+</body>
+</html>

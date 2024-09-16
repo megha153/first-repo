@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Page</title>
+    <style>
+        :root {
+            --background: #1a1a2e;
+            --color: #ffffff;
+            --primary-color: #0f3460;
+        }
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: "Poppins", sans-serif;
+            background: var(--background);
+            color: var(--color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        /* Heading Styling */
+        h2 {
+            margin-bottom: 30px;
+            color: var(--color);
+            font-size: 2.5rem;
+        }
+
+        /* Button Styling */
+        button {
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 5px;
+            color: var(--color);
+            font-size: 16px;
+            padding: 15px 30px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: scale(1.02);
+        }
+
+        /* Link Styling */
+        a {
+            text-decoration: none;
+        }
+
+        /* Container Styling */
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Decorative Circles */
+        .circle {
+            width: 8rem;
+            height: 8rem;
+            background: var(--primary-color);
+            border-radius: 50%;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .circle-one {
+            top: -10%;
+            left: -10%;
+            transform: translate(-45%, -45%);
+        }
+
+        .circle-two {
+            bottom: -10%;
+            right: -10%;
+            transform: translate(45%, 45%);
+        }
+    </style>
+</head>
+<body>
+    <div class="circle circle-one"></div>
+    <div class="circle circle-two"></div>
+    <h2>Welcome to Authentication App!</h2>
+    <div>
+        <a href="/loginPage"><button>LOGIN</button></a>
+        <a href="/signUpPage"><button>SIGN UP</button></a>
+    </div>
+</body>
+</html>
